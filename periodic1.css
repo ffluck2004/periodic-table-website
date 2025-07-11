@@ -1,0 +1,284 @@
+
+    /* Page content */
+    #tile {
+      padding-top: 70px;
+    }
+    
+    #title {
+      text-align: center;
+    }
+  
+    /*information description*/
+    #info_title {
+      background: #f2f2f4;
+      width: 415px;
+      height: 34px;
+      color: #636363;
+      line-height: 26px;
+      padding: 14px 0 0 15px;
+      text-align: left;
+      font-family: museo_sans_500regular, Arial !important;
+      font-size: 30px;
+    }
+    #info_desc {
+      border: 1px solid #dedede;
+      padding: 6px 11px 11px 11px;
+      width: 400px;
+      height: 90px;
+      margin-top: 2px;
+      overflow: hidden;
+      font-family: Arial !important;
+      font-size: 15px;
+      color: #636363;
+      position: relative; 
+      top: 345px; 
+      right:10%;
+      left: 40%; 
+      transform: translateX(-50%); 
+      z-index: 10; 
+  
+    }
+    
+    #info_div {
+      position: relative; /* Allows precise placement */
+      top: 350px; /* Distance from the top of the page */
+      right:20%;
+      width:880px;
+      left:56%; /* Center horizontally relative to the page */
+      transform: translateX(-50%); /* Adjust for centering */
+      z-index: 10; /* Ensure it appears above other elements */
+    }
+  /* blocks,groups,periods*/
+  
+    
+    /* Controls Section(visiuals elements, temperature,classification) */
+  .controls {
+      margin-top: 80px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    .button {
+      padding: 10px 15px;
+      background-color: #620062;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #classification {
+        font-size:14px;
+        font-weight: 600;
+        font-style: medium;
+    }
+    
+    .button.metal {
+      background-color: #620062;
+    }
+    
+    .button.non-metal {
+      background-color: #620062;
+    }
+    
+    .button.clear-filters {
+      background-color: #620062;
+    }
+    
+    .button:hover {
+      opacity: 0.9;
+    }
+    
+    
+    
+    /* Periodic table styles */
+    .p_table {
+      margin-top: 0%;
+      border-collapse: separate; /* Allows border radius on cells */
+      border-spacing: 5px; /* Adds space between cells */
+      background-color: #f9f9f9; /* Subtle background for the table */
+      padding: 10px; /* Padding around the table content */
+      border: 2px solid #ccc; /* Subtle border around the table */
+      border-radius: 10px; /* Rounded corners for the table */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+      max-width: 90%; /* Restrict the width of the table */
+  }
+  
+  .p_table td {
+      text-align: center; /* Center text inside each cell */
+      padding: 10px; /* Add padding to make cells look clean */
+      background-color: #ffffff; /* White background for cells */
+      border: 1px solid #ddd; /* Subtle border for cells */
+      border-radius: 5px; /* Rounded corners for each cell */
+      font-family: Arial, sans-serif; /* Clean font */
+      font-size: 14px; /* Readable font size */
+      font-weight: bold; /* Emphasize text */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for cells */
+  }
+  
+  /* Spacer cells */
+  .p_table .spacer {
+      background-color: transparent; /* Keep spacers invisible */
+      border: none; /* No border for spacers */
+      box-shadow: none; /* No shadow for spacers */
+  }
+  
+  /* Specific groups styling */
+  .p_table .alkali-metal {
+      background-color: #ffb3ba; /* Bright pastel red */
+      color: #cc0000; /* Darker red for contrast */
+  }
+  
+  .p_table .alkaline-earth-metal {
+      background-color: #ffdfba; /* Bright pastel orange */
+      color: #b35900; /* Darker orange for contrast */
+  }
+  
+  .p_table .transition-metal {
+      background-color: #bae1ff; /* Bright pastel blue */
+      color: #005f73; /* Darker blue for contrast */
+  }
+  
+  .p_table .post-transition-metal {
+      background-color: #dabfff; /* Bright pastel purple */
+      color: #6a0dad; /* Darker purple for contrast */
+  }
+  
+  .p_table .metalloid {
+      background-color: #baffc9; /* Bright pastel green */
+      color: #008000; /* Darker green for contrast */
+  }
+  
+  .p_table .non-metal {
+      background-color: #a6d5e8; /* Bright pastel navy */
+      color: #003366; /* Darker navy for contrast */
+  }
+  
+  .p_table .halogen {
+      background-color: #ffb6c1; /* Bright pastel pink */
+      color: #99004b; /* Darker magenta for contrast */
+  }
+  
+  .p_table .noble-gas {
+      background-color: #f8c3c3; /* Bright pastel coral */
+      color: #996633; /* Darker brown for contrast */
+  }
+  
+  .p_table .lanthanide {
+      background-color: #e6f8b2; /* Bright pastel lime */
+      color: #666600; /* Darker olive for contrast */
+  }
+  
+  .p_table .actinide {
+      background-color: #f8b2d8; /* Bright pastel rose */
+      color: #660066; /* Darker maroon for contrast */
+  }
+  
+  table {
+      margin: auto;
+      border-collapse: collapse;
+  }
+  
+  td {
+      text-align: center;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+  }
+    
+    
+    /* Navigation bar styles */
+  nav {
+      background-color: #620062;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      left: -1%;
+    }
+    
+    nav h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    /* Section styles */
+    #content {
+      padding-top: 70px;
+      margin-bottom: 4px;
+    }
+    
+    .section {
+      display: none;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      margin: 20px;
+    }
+    
+    .section.active {
+      display: block;
+    }
+  
+  /* Title Section */
+  #tile {
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  #title {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  /* Periodic Table Section */
+  #periodic-table {
+    overflow-x: auto;
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  *{
+    font-family: arial sans-serif;
+
+  }
+ 
+  body {
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 40%;
+    margin-top: 0%;
+
+  }
+
+
+ 

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periodic Table</title>
+<style>
+
+    /* Page content */
+    #tile {
+      padding-top: 70px;
+    }
+    
+    #title {
+      text-align: center;
+    }
+  
+    /*information description*/
+    #info_title {
+      background: #f2f2f4;
+      width: 415px;
+      height: 34px;
+      color: #636363;
+      line-height: 26px;
+      padding: 14px 0 0 15px;
+      text-align: left;
+      font-family: museo_sans_500regular, Arial !important;
+      font-size: 30px;
+    }
+    #info_desc {
+      border: 1px solid #dedede;
+      padding: 6px 11px 11px 11px;
+      width: 400px;
+      height: 90px;
+      margin-top: 2px;
+      overflow: hidden;
+      font-family: Arial !important;
+      font-size: 15px;
+      color: #636363;
+      position: relative; /* Allows precise placement */
+      top: 345px; /* Distance from the top of the page */
+      right:10%;
+      left: 40%; /* Center horizontally relative to the page */
+      transform: translateX(-50%); /* Adjust for centering */
+      z-index: 10; /* Ensure it appears above other elements */
+  
+    }
+    
+    #info_div {
+      position: relative; /* Allows precise placement */
+      top: 350px; /* Distance from the top of the page */
+      right:20%;
+      width:880px;
+      left:56%; /* Center horizontally relative to the page */
+      transform: translateX(-50%); /* Adjust for centering */
+      z-index: 10; /* Ensure it appears above other elements */
+    }
+  /* blocks,groups,periods*/
+  
+    
+    /* Controls Section(visiuals elements, temperature,classification) */
+  .controls {
+      margin-top: 80px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    .button {
+      padding: 10px 15px;
+      background-color: #620062;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #classification {
+        font-size:14px;
+        font-weight: 600;
+        font-style: medium;
+    }
+    
+    .button.metal {
+      background-color: #620062;
+    }
+    
+    .button.non-metal {
+      background-color: #620062;
+    }
+    
+    .button.clear-filters {
+      background-color: #620062;
+    }
+    
+    .button:hover {
+      opacity: 0.9;
+    }
+    
+    /* Temperature Slider */
+    .temperature-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    #temperature-slider {
+      cursor: pointer;
+    }
+    
+    #temperature-value {
+      font-size: 14px;
+    }
+    
+    /* Periodic table styles */
+    .p_table {
+    margin-top: 0%;
+    border-collapse: separate; /* Allows border radius on cells */
+    border-spacing: 5px; /* Adds space between cells */
+    background-color: #f9f9f9; /* Subtle background for the table */
+    padding: 10px; /* Padding around the table content */
+    border: 2px solid #ccc; /* Subtle border around the table */
+    border-radius: 10px; /* Rounded corners for the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 90%; /* Restrict the width of the table */
+}
+
+.p_table td {
+    text-align: center; /* Center text inside each cell */
+    padding: 10px; /* Add padding to make cells look clean */
+    background-color: #ffffff; /* White background for cells */
+    border: 1px solid #ddd; /* Subtle border for cells */
+    border-radius: 5px; /* Rounded corners for each cell */
+    font-family: Arial, sans-serif; /* Clean font */
+    font-size: 14px; /* Readable font size */
+    font-weight: bold; /* Emphasize text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for cells */
+}
+
+/* Spacer cells */
+.p_table .spacer {
+    background-color: transparent; 
+    border: none; 
+    box-shadow: none; 
+}
+
+/* Specific groups styling */
+.p_table .alkali-metal {
+  background: url(../images/Button_bdg.png) scroll no-repeat -2px 0 transparent;
+  color: #999999 !important;
+}
+
+.p_table .alkaline-earth-metal {
+  background: url(../images/Button_bdg.png) scroll no-repeat -2px 0 transparent;
+  color: #999999 !important;
+}
+
+.p_table .transition-metal {
+  background: url(../images/Button_bdg.png) scroll no-repeat -2px 0 transparent;
+  color: #999999 !important;
+}
+
+.p_table .post-transition-metal {
+  background: url(../images/Button_bdg.png) scroll no-repeat -2px 0 transparent;
+  color: #999999 !important;
+}
+
+.p_table .metalloid {
+    background-color: #baffc9; /* Bright pastel green */
+    color: #008000; /* Darker green for contrast */
+}
+
+.p_table .non-metal {
+    background-color: #a6d5e8; /* Bright pastel navy */
+    color: #003366; /* Darker navy for contrast */
+}
+
+.p_table .halogen {
+    background-color: #ffb6c1; /* Bright pastel pink */
+    color: #99004b; /* Darker magenta for contrast */
+}
+
+.p_table .noble-gas {
+    background-color: #f8c3c3; /* Bright pastel coral */
+    color: #996633; /* Darker brown for contrast */
+}
+
+.p_table .lanthanide {
+  background: url(../images/Button_bdg.png) scroll no-repeat -2px 0 transparent;
+  color: #999999 !important;
+}
+
+.p_table .actinide {
+  background: url(../images/Button_bdg.png) scroll no-repeat -2px 0 transparent;
+  color: #999999 !important;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+}
+
+    
+    /* Navigation bar styles */
+  nav {
+      background-color: #620062;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      left: -1%;
+    }
+    
+    nav h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    /* Section styles */
+    #content {
+      padding-top: 70px;
+      margin-bottom: 4px;
+    }
+    
+    .section {
+      display: none;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      margin: 20px;
+    }
+    
+    .section.active {
+      display: block;
+    }
+  
+  /* Title Section */
+  #tile {
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  #title {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  /* Periodic Table Section */
+  #periodic-table {
+    overflow-x: auto;
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  *{
+    font-family: arial sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 40%;
+    margin-top: 0%;
+
+  }
+
+</style>
+</head>
+<body>
+  <header>
+  <nav>
+    <h1>Periodic Table</h1>
+    <div id="header-nav">
+      <a href="periodic1.html" class="nav-link" data-section="home">Home</a>
+      <a href="history.html" class="nav-link" data-section="history">History</a>
+      <a href="alchemy.html" class="nav-link" data-section="alchemy">Alchemy</a>
+      <a href="trends.html" class="nav-link" data-section="trends">Trends</a>
+    </div>
+  </nav>
+  </header>
+  <main>
+  <!--description box with information-->
+  <div id="info_div">
+    <h2 id="info_title">Non-Metals</h2>
+  </div>
+  <div id="info_desc">
+    <p>Non-metallic elements have more varied properties than metals. 
+      They are poor conductors of heat and electricity and in reactions 
+      they commonly form negative ions. Metalloids have properties that 
+      are in between those of metals and non-metals.
+    </p>
+  </div>
+
+  <!--another navigation for groups,blocks,periods-->
+  
+  </nav>
+  <div id="controls" class="controls">
+    <!--blocks button-->
+    <label for="blocks">Blocks</label>
+  <a href="s-block.html">
+    <button class="button metal" id="metal-btn">s</button>
+    </a>
+
+    <a href="d-block.html">
+      <button class="button metal" id="metal-btn">d</button>
+      </a>
+
+      <a href="p-block.html">
+        <button class="button metal" id="metal-btn">p</button>
+        </a>
+
+        <a href="f-block.html">
+          <button class="button metal" id="metal-btn">f</button>
+          </a>
+    
+    <label>Classification</label>
+    <!--metal button-->
+    <a href="metals.html">
+    <button class="button metal" id="metal-btn">Metal</button>
+  </a>
+  <!--non metal button-->
+    <a href="non-metal.html">
+        <button class="button non-metal" id="non-metal-btn">Non-Metal</button>
+        </a>
+    <!--clear filter button-->
+    <a href="clearFilter.html">
+      <button class="button clear-filters" id="clear-filters-btn">Clear Filters</button>
+      </a>
+      <!--lanthinides and actinides button-->
+      <a href="lactinides.html">
+        <button class="button metal" id="metal-btn">Lactinides</button>
+        </a>
+        <a href="actinides.html">
+          <button class="button metal" id="metal-btn">Actinides</button>
+          </a>
+
+          <!-- halogen , metalloids and noble gas button -->
+        <a href="halogen.html">
+          <button class="button metal" >Halogen</button>
+          </a>
+          <a href="metalloid.html">
+            <button class="button metal" >Metalloid</button>
+            </a>
+            <a href="noble-gas.html">
+              <button class="button metal" >Noble-gas</button>
+              </a>
+    
+  </div>
+
+    <!-- Periodic table content -->
+     <!--perioidc table content-->
+  <table class="p_table">
+    <tr>
+      <td class="alkali-metal">H<br>1</td>
+      <td colspan="16" class="spacer"></td>
+      <td class="noble-gas">He<br>2</td>
+    </tr>
+    <tr>
+      <td class="alkali-metal">Li<br>3</td>
+      <td class="alkaline-earth-metal">Be<br>4</td>
+      <td colspan="10" class="spacer"></td>
+      <td class="metalloid">B<br>5</td>
+      <td class="non-metal">C<br>6</td>
+      <td class="non-metal">N<br>7</td>
+      <td class="non-metal">O<br>8</td>
+      <td class="halogen">F<br>9</td>
+      <td class="noble-gas">Ne<br>10</td>
+    </tr>
+    <tr>
+      <td class="alkali-metal">Na<br>11</td>
+      <td class="alkaline-earth-metal">Mg<br>12</td>
+      <td colspan="10" class="spacer"></td>
+      <td class="post-transition-metal">Al<br>13</td>
+      <td class="metalloid">Si<br>14</td>
+      <td class="non-metal">P<br>15</td>
+      <td class="non-metal">S<br>16</td>
+      <td class="halogen">Cl<br>17</td>
+      <td class="noble-gas">Ar<br>18</td>
+    </tr>
+    <tr>
+      <td class="alkali-metal">K<br>19</td>
+      <td class="alkaline-earth-metal">Ca<br>20</td>
+      <td class="transition-metal">Sc<br>21</td>
+      <td class="transition-metal">Ti<br>22</td>
+      <td class="transition-metal">V<br>23</td>
+      <td class="transition-metal">Cr<br>24</td>
+      <td class="transition-metal">Mn<br>25</td>
+      <td class="transition-metal">Fe<br>26</td>
+      <td class="transition-metal">Co<br>27</td>
+      <td class="transition-metal">Ni<br>28</td>
+      <td class="transition-metal">Cu<br>29</td>
+      <td class="transition-metal">Zn<br>30</td>
+      <td class="post-transition-metal">Ga<br>31</td>
+      <td class="metalloid">Ge<br>32</td>
+      <td class="metalloid">As<br>33</td>
+      <td class="non-metal">Se<br>34</td>
+      <td class="halogen">Br<br>35</td>
+      <td class="noble-gas">Kr<br>36</td>
+    </tr>
+    <tr>
+      <td class="alkali-metal">Rb<br>37</td>
+      <td class="alkaline-earth-metal">Sr<br>38</td>
+      <td class="transition-metal">Y<br>39</td>
+      <td class="transition-metal">Zr<br>40</td>
+      <td class="transition-metal">Nb<br>41</td>
+      <td class="transition-metal">Mo<br>42</td>
+      <td class="transition-metal">Tc<br>43</td>
+      <td class="transition-metal">Ru<br>44</td>
+      <td class="transition-metal">Rh<br>45</td>
+      <td class="transition-metal">Pd<br>46</td>
+      <td class="transition-metal">Ag<br>47</td>
+      <td class="transition-metal">Cd<br>48</td>
+      <td class="post-transition-metal">In<br>49</td>
+      <td class="post-transition-metal">Sn<br>50</td>
+      <td class="metalloid">Sb<br>51</td>
+      <td class="metalloid">Te<br>52</td>
+      <td class="halogen">I<br>53</td>
+      <td class="noble-gas">Xe<br>54</td>
+    </tr>
+    <tr>
+      <td class="alkali-metal">Cs<br>55</td>
+      <td class="alkaline-earth-metal">Ba<br>56</td>
+      <td class="transition-metal">La<br>57</td>
+      <td class="transition-metal">Hf<br>72</td>
+      <td class="transition-metal">Ta<br>73</td>
+      <td class="transition-metal">W<br>74</td>
+      <td class="transition-metal">Re<br>75</td>
+      <td class="transition-metal">Os<br>76</td>
+      <td class="transition-metal">Ir<br>77</td>
+      <td class="transition-metal">Pt<br>78</td>
+      <td class="transition-metal">Au<br>79</td>
+      <td class="post-transition-metal">Hg<br>80</td>
+      <td class="post-transition-metal">Tl<br>81</td>
+      <td class="post-transition-metal">Pb<br>82</td>
+      <td class="post-transition-metal">Bi<br>83</td>
+      <td class="metalloid">Po<br>84</td>
+      <td class="metalloid">At<br>85</td>
+      <td class="noble-gas">Rn<br>86</td>
+    </tr>
+    <tr class="period-7">
+      <td class="alkali-metal">Fr<br>87</td>
+      <td class="alkali-metal">Ra<br>88</td>
+      <td class="transition-metal">Ac<br>89</td>
+      <td class="transition-metal">Rf<br>104</td>
+      <td class="transition-metal">Db<br>105</td>
+      <td class="transition-metal">Sg<br>106</td>
+      <td class="transition-metal">Bh<br>107</td>
+      <td class="transition-metal">Hs<br>108</td>
+      <td class="transition-metal">Mt<br>109</td>
+      <td class="post-transition-metal">Ds<br>110</td>
+      <td class="post-transition-metal">Rg<br>111</td>
+      <td class="post-transition-metal">Cn<br>112</td>
+      <td class="post-transition-metal">Nh<br>113</td>
+      <td class="post-transition-metal">Fl<br>114</td>
+      <td class="post-transition-metal">Mc<br>115</td>
+      <td class="post-transition-metal">Lv<br>116</td>
+      <td class="post-transition-metal">Ts<br>117</td>
+      <td class="noble-gas">Og<br>118</td>
+    </tr>
+    <td class="spacer" colspan="18"></td>
+    <tr>
+      <td class="spacer" colspan="2"></td>
+      <td class="lanthanide">La<br>57</td>
+      <td class="lanthanide">Ce<br>58</td>
+      <td class="lanthanide">Pr<br>59</td>
+      <td class="lanthanide">Nd<br>60</td>
+      <td class="lanthanide">Pm<br>61</td>
+      <td class="lanthanide">Sm<br>62</td>
+      <td class="lanthanide">Eu<br>63</td>
+      <td class="lanthanide">Gd<br>64</td>
+      <td class="lanthanide">Tb<br>65</td>
+      <td class="lanthanide">Dy<br>66</td>
+      <td class="lanthanide">Ho<br>67</td>
+      <td class="lanthanide">Er<br>68</td>
+      <td class="lanthanide">Tm<br>69</td>
+      <td class="lanthanide">Yb<br>70</td>
+      <td class="lanthanide">Lu<br>71</td>
+    </tr>
+    <tr>
+      <td class="spacer" colspan="2"></td>
+      <td class="actinide">Ac<br>89</td>
+      <td class="actinide">Th<br>90</td>
+      <td class="actinide">Pa<br>91</td>
+      <td class="actinide">U<br>92</td>
+      <td class="actinide">Np<br>93</td>
+      <td class="actinide">Pu<br>94</td>
+      <td class="actinide">Am<br>95</td>
+      <td class="actinide">Cm<br>96</td>
+      <td class="actinide">Bk<br>97</td>
+      <td class="actinide">Cf<br>98</td>
+      <td class="actinide">Es<br>99</td>
+      <td class="actinide">Fm<br>100</td>
+      <td class="actinide">Md<br>101</td>
+      <td class="actinide">No<br>102</td>
+      <td class="actinide">Lr<br>103</td>
+    </tr>
+  
+  </table>
+  </main>
+
+
+  <script src="periodic1.js"></script>
+</body>
+</html>
+
+    

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alchemy</title>
+  <style>
+    nav {
+  background-color: #620062;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  left: -1%;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#alchemy-content {
+  margin-top: 80px; /* To avoid overlap with the fixed nav bar */
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+#tile {
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  #title {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  body {
+              font-family: Arial, sans-serif;
+              background-color: #f4f4f4;
+              margin: 0;
+              padding: 0;
+          }
+          .container {
+            margin-top: 5%;
+            margin-left: 7%;
+              width: 80%;
+              background: #333;
+              color: #fff;
+              padding: 20px;
+              border-radius: 10px;
+          }
+          .title {
+              font-size: 24px;
+              font-weight: bold;
+          }
+          .content-box {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              background: #444;
+              padding: 20px;
+              border-radius: 10px;
+          }
+          .symbol {
+              width: 100px;
+              height: 100px;
+              background: #666;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
+          .text-content {
+              flex-grow: 1;
+              background: #555;
+              padding: 10px;
+              border-radius: 5px;
+              min-height: 100px;
+          }
+          .explore-section {
+              margin-top: 20px;
+              padding: 20px;
+              background: #222;
+              border-radius: 10px;
+          }
+          .explore-btn {
+              background: #ffcc00;
+              border: none;
+              padding: 10px 20px;
+              font-size: 16px;
+              cursor: pointer;
+              border-radius: 5px;
+          }
+          .elements-grid {
+              display: none;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 10px;
+              margin-top: 20px;
+          }
+          .element {
+              width: 100px;
+              height: 100px;
+              background: #777;
+              display: flex;
+              align-items: stretch;
+              justify-content: stretch;
+              border-radius: 5px;
+          }
+          .element img {
+              width: 100%;
+              height: 100%;
+              align-items: center;
+
+              border-radius: 5px;
+          }
+          *{
+  font-family: arial sans-serif;
+ }
+
+
+  </style>
+  <link rel="stylesheet" href="alchemy.css">
+</head>
+<body>
+  <nav>
+    <h1>Periodic Table</h1>
+    <div id="header-nav">
+      <a href="periodic1.html" class="nav-link" data-section="home">Home</a>
+      <a href="history.html" class="nav-link" data-section="history">History</a>
+      <a href="alchemy.html" class="nav-link" data-section="alchemy">Alchemy</a>
+      <a href="trends.html" class="nav-link" data-section="trends">Trends</a>
+    </div>
+  </nav>
+
+      <script>
+          function toggleElements() {
+              var grid = document.querySelector('.elements-grid');
+              grid.style.display = grid.style.display === 'grid' ? 'none' : 'grid';
+          }
+      </script>
+  </head>
+  <body>
+      <div class="container">
+          <header>
+              <h1 class="title">What is alchemy?</h1>
+          </header>
+          <section class="content-box">
+              <div class="symbol"><img src="https://periodic-table.rsc.org/Content/Images/alc_01.jpg?6.0.4.2" alt="Alchemy Symbol"></div>
+              <div class="text-content">
+                  <p>The art of alchemy was handed down through the centuries from Egypt and Arabia to Greece and Rome, and finally to western and central Europe. The word is derived from the Arabian phrase "al-kimia," which refers to the preparation of the Stone or Elixir by the Egyptians. The Arabic root "kimia" comes from the Coptic "khem" that alluded to the fertile black soil of the Nile delta. Esoterically and hieroglyphically, the word refers to the dark mystery of the primordial or First Matter (the Khem).</p>
+                  <p>Simplified, the aims of the alchemists were threefold: to find the Stone of Knowledge (The Philosophers' Stone), to discover the medium of Eternal Youth and Health, and to discover the transmutation of metals. To the medieval alchemist's mind the different elements were but the same original substance in varying degrees of purity. Gold was the purest of all and silver followed closely.</p>
+                  <p>In the early days of alchemy, the astronomical signs of the planets were also used as alchemical symbols. Then in the centuries of medieval persecution and suppression every alchemist invented his own secret symbols. Charlatans, quacks and cheats took over and alchemy became, along with sorcery and witchcraft, infamous for fraud and extortion. In the 18th century scientists tried to pry loose the real achievements in chemistry, pharmacology and medicine from this confusing cornucopia of science and magic.</p>
+              </div>
+          </section>
+          <section class="explore-section">
+              <button class="explore-btn" onclick="toggleElements()">Explore all alchemical elements</button>
+              <div class="elements-grid">
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/antimony-M.jpg?6.0.4.2" alt="Antimony">
+                  <p><strong>Antimony</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/arsenic-M.jpg?6.0.4.2" alt="Arsenic">
+                  <p><strong>Arsenic</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/bismuth-M.jpg?6.0.4.2" alt="Bismuth">
+                  <p><strong>Bismuth</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/copper-M.jpg?6.0.4.2" alt="Copper">
+                  <p><strong>Copper</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/gold-M.jpg?6.0.4.2" alt="Gold">
+                  <p><strong>Gold</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/iron-M.jpg?6.0.4.2" alt="Iron">
+                  <p><strong>Iron</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/lead-M.jpg?6.0.4.2" alt="Lead">
+                  <p><strong>Lead</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/magnesium-M.jpg?6.0.4.2" alt="Magnesium">
+                  <p><strong>Magnesium</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/mercury-M.jpg?6.0.4.2" alt="Mercury">
+                  <p><strong>Mercury</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/phosphorus-M.jpg?6.0.4.2" alt="Phosphorus">
+                  <p><strong>Phosphorus</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/platinum-M.jpg?6.0.4.2" alt="Platinum">
+                  <p><strong>Platinum</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/potassium-M.jpg?6.0.4.2" alt="Potassium">
+                  <p><strong>Potassium</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/silver-M.jpg?6.0.4.2" alt="Silver">
+                  <p><strong>Silver</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/sulfur-M.jpg?6.0.4.2" alt="Sulfur">
+                  <p><strong>Sulfur</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/tin-M.jpg?6.0.4.2" alt="Tin">
+                  <p><strong>Tin</strong></p>
+                </div>
+                <div class="element">
+                  <img src="https://periodic-table.rsc.org/Content/Images/zinc-M.jpg?6.0.4.2" alt="Zinc">
+                  <p><strong>Zinc</strong></p>
+                </div>
+              </div>
+            </section>
+
+      </div>
+  </body>
+  </html>
+  

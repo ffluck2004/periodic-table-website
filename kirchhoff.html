@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>History page</title>
+    <style>
+        /* General Reset */
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://i.pinimg.com/736x/40/1e/99/401e994eafd5f8fa0b8bec96630bb593.jpg'); /* Replace with your historical background image */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #080000;
+}
+
+nav {
+    background-color: #620062;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    left: -1%;
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+.content {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+}
+
+/* Table Styling */
+.history-table {
+  margin: 20px auto;
+  border-collapse: separate; /* Allows for cleaner border styling */
+  border-spacing: 0; /* No extra spacing between cells */
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 0%;
+  background-color: url('https://static.vecteezy.com/system/resources/previews/038/957/957/non_2x/ai-generated-old-paper-canvas-texture-grunge-background-photo.jpg'); /* Uniform golden semi-transparent background */
+  border-radius: 12px; /* Smooth rounded corners */
+  overflow: hidden; /* Ensures rounded corners apply to content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+}
+
+.history-table th, .history-table td {
+  text-align: center;
+  padding: 14px; /* Balanced padding for better spacing */
+  font-size: 16px; /* Readable font size */
+  font-weight: 600; /* Slightly bold for visibility */
+  color: #070000; /* White text for contrast against the golden background */
+}
+
+.history-table th {
+  background-color: rgba(153, 102, 17, 0.8); /* Slightly darker golden tone for headers */
+  color: #0e0000; /* White text for contrast */
+  font-size: 18px; /* Slightly larger text for headers */
+  font-weight: 700; /* Bold for emphasis */
+  border-bottom: 2px solid rgba(9, 1, 1, 0.5); /* Line below header */
+}
+
+.history-table tr {
+  border-bottom: 1px solid rgba(9, 0, 0, 0.5); /* Line between rows */
+}
+
+.history-table tr:last-child {
+  border-bottom: none; /* Remove line for the last row */
+}
+
+
+.history-table td:last-child, .history-table th:last-child {
+  border-right: none; /* Removes unnecessary right border */
+}
+
+.history-table td:first-child, .history-table th:first-child {
+  border-left: none; /* Removes unnecessary left border */
+}
+
+ *{
+  font-family: arial sans-serif;
+ }
+
+ #tile {
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  #title {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+
+  /* slider discoverrres navbar*/
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.pinimg.com/736x/17/32/7f/17327f6b5e61e744a2eb113e10e11a88.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 70%;
+            margin: 50px auto;
+            overflow: hidden;
+            border: 2px solid #000;
+            border-radius: 10px;
+            background: rgba(100, 77, 2, 0.199);
+            padding: 20px;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 200px;
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        .slide img {
+            max-width: 150px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #555;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .slide p {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .nav-left {
+            left: 10px;
+        }
+
+        .nav-right {
+            right: 10px;
+        }
+
+        .clear-button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 5px 15px;
+            background: #8B4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .clear-button:hover {
+            background: #A0522D;
+        }
+        *{
+  font-family: arial sans-serif;
+ }
+
+ #kirchhoff {
+    background-color: rgb(234, 117, 20);
+    color: black;
+ }
+
+ #info-div{
+  background: #543A14;
+      width: 400px;
+      height: 34px;
+      color: #e3d7d7;
+      line-height: 26px;
+      padding: 14px 0 0 15px;
+      text-align: left;
+      font-family: museo_sans_500regular, Arial !important;
+      font-size: 30px;
+  position: relative; /* Allows precise placement */
+      top: 150px; /* Distance from the top of the page */
+      right:20%;
+      left:40%; /* Center horizontally relative to the page */
+      transform: translateX(-50%); /* Adjust for centering */
+      z-index: 10; /* Ensure it appears above other elements */
+ }
+ #info_desc {
+      border: 1px solid #dedede;
+      padding: 6px 11px 11px 11px;
+      width: 400px;
+      height: 90px;
+      margin-top: 2px;
+      overflow: hidden;
+      font-family: Arial !important;
+      font-size: 15px;
+      color: #FFEAC5;
+      background-color: #543A14;
+      position: relative; /* Allows precise placement */
+      top: 170px; /* Distance from the top of the page */
+      right:40%;
+      left: 40%; /* Center horizontally relative to the page */
+      transform: translateX(-50%); /* Adjust for centering */
+      z-index: 10; /* Ensure it appears above other elements */
+  
+    }
+
+  
+    </style>
+</head>
+<body>
+ 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History of the Periodic Table</title>
+  <link rel="stylesheet" href="history.css">
+</head>
+<body>
+  <nav>
+    <h1>Periodic Table</h1>
+    <div id="header-nav">
+      <a href="periodic1.html" class="nav-link" data-section="home">Home</a>
+      <a href="history.html" class="nav-link active" data-section="history">History</a>
+      <a href="alchemy.html" class="nav-link" data-section="alchemy">Alchemy</a>
+      <a href="trends.html" class="nav-link" data-section="trends">Trends</a>
+    </div>
+  </nav>
+  <!--sliding nav bar of discoverrers-->
+  <div class="slider-container">
+    <button class="nav-button nav-left" onclick="slideLeft()">&#x276E;</button>
+    <div class="slider" id="slider">
+        <div class="slide" onclick="navigateTo('davy.html')">
+            <img src="https://i.pinimg.com/736x/22/85/ec/2285ec880ecddb32616ad49db51a475d.jpg" alt="Davy">
+            <p>Davy</p>
+        </div>
+        <div class="slide" onclick="navigateTo('berzelius.html')">
+            <img src="https://i.pinimg.com/736x/13/96/21/13962177500808f02f3822ce4ffe9326.jpg" alt="Berzelius">
+            <p>Berzelius</p>
+        </div>
+        <div class="slide" onclick="navigateTo('bunsen.html')">
+            <img src="https://i.pinimg.com/236x/03/b6/43/03b6439ed8766214dd0e12f57f87d1e9.jpg" alt="Bunsen">
+            <p>Bunsen</p>
+        </div>
+        <div class="slide" onclick="navigateTo('kirchhoff.html')">
+            <img src="https://images-cdn.bridgemanimages.com/api/1.0/image/150.XXX.99211110.7055475/1108120.jpg" alt="Kirchhoff">
+            <p>Kirchhoff</p>
+        </div>
+        <div class="slide" onclick="navigateTo('Boisbaudran.html')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Lecoq_de_Boisbaudran.jpg" alt="Ramsay">
+          <p>Boisbaudran</p>
+      </div>
+        <div class="slide" onclick="navigateTo('ramsay.html')">
+            <img src="https://lh3.googleusercontent.com/proxy/TMtQ2yptl5RzjO2CoN6ZAUAyldNAuZKDwijjeSkb4o-kINT2xys-Fbe_ttfNXwXUfFUAAFOcvRjzw5u1aax7KwNrXu-viJadcbL3NKrVI8v3" alt="Ramsay">
+            <p>Ramsay</p>
+        </div>
+        <div class="slide" onclick="navigateTo('curie.html')">
+            <img src="https://preview.redd.it/7iacxmcah7641.jpg?width=1080&crop=smart&auto=webp&s=ec7090fd102ed0e1d533bc17d7630c0312be4732" alt="Curie">
+            <p>Curie</p>
+        </div>
+        <div class="slide" onclick="navigateTo('seaborg.html')">
+            <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/1-american-physicist-and-chemist-glenn-t-seaborg-david-parkerscience-photo-library.jpg" alt="Seaborg">
+            <p>Seaborg</p>
+        </div>
+    </div>
+    <button class="nav-button nav-right" onclick="slideRight()">&#x276F;</button>
+</div>
+<button class="clear-button" onclick="navigateTo('clearfilter2.html')">Clear Filter</button>
+
+<div id="info-div">
+  <span>Gustav Kirchhoff</span>
+</div>
+<div id="info_desc">
+  <p>
+    1824 - 1887&nbsp;&nbsp;&nbsp;&nbsp;Nationality : Germen<br>
+  Kirchhoff and Bunsen, discovered the elements highlighted below. 
+  They used atomic spectroscopy followed by chemical separations. 
+  This technique was used by other scientists to discover several more elements.
+  </p>
+</div>
+
+
+  <div class="history-table">
+    <!--perioidc table content-->
+  <table class="p_table">
+    <tr>
+      <td class="alkali-metal">H<br>1</td>
+      <td colspan="16" class="spacer"></td>
+      <td class="noble-gas">He<br>2</td>
+    </tr>
+    <tr>
+      <td class="alkali-metal">Li<br>3</td>
+      <td class="alkaline-earth-metal">Be<br>4</td>
+      <td colspan="10" class="spacer"></td>
+      <td class="metalloid">B<br>5</td>
+      <td class="non-metal">C<br>6</td>
+      <td class="non-metal">N<br>7</td>
+      <td class="non-metal">O<br>8</td>
+      <td class="halogen">F<br>9</td>
+      <td class="noble-gas">Ne<br>10</td>
+    </tr>
+    <tr>
+      <td class="alkali-metal">Na<br>11</td>
+      <td class="alkaline-earth-metal">Mg<br>12</td>
+      <td colspan="10" class="spacer"></td>
+      <td class="post-transition-metal">Al<br>13</td>
+      <td class="metalloid">Si<br>14</td>
+      <td class="non-metal">P<br>15</td>
+      <td class="non-metal">S<br>16</td>
+      <td class="halogen">Cl<br>17</td>
+      <td class="noble-gas">Ar<br>18</td>
+    </tr>
+    <tr>
+      <td class="alkali-metal">K<br>19</td>
+      <td class="alkaline-earth-metal">Ca<br>20</td>
+      <td class="transition-metal">Sc<br>21</td>
+      <td class="transition-metal">Ti<br>22</td>
+      <td class="transition-metal">V<br>23</td>
+      <td class="transition-metal">Cr<br>24</td>
+      <td class="transition-metal">Mn<br>25</td>
+      <td class="transition-metal">Fe<br>26</td>
+      <td class="transition-metal">Co<br>27</td>
+      <td class="transition-metal">Ni<br>28</td>
+      <td class="transition-metal">Cu<br>29</td>
+      <td class="transition-metal">Zn<br>30</td>
+      <td class="post-transition-metal">Ga<br>31</td>
+      <td class="metalloid">Ge<br>32</td>
+      <td class="metalloid">As<br>33</td>
+      <td class="non-metal">Se<br>34</td>
+      <td class="halogen">Br<br>35</td>
+      <td class="noble-gas">Kr<br>36</td>
+    </tr>
+    <tr>
+      <td id="kirchhoff" class="alkali-metal">Rb<br>37</td>
+      <td class="alkaline-earth-metal">Sr<br>38</td>
+      <td class="transition-metal">Y<br>39</td>
+      <td class="transition-metal">Zr<br>40</td>
+      <td class="transition-metal">Nb<br>41</td>
+      <td class="transition-metal">Mo<br>42</td>
+      <td class="transition-metal">Tc<br>43</td>
+      <td class="transition-metal">Ru<br>44</td>
+      <td class="transition-metal">Rh<br>45</td>
+      <td class="transition-metal">Pd<br>46</td>
+      <td class="transition-metal">Ag<br>47</td>
+      <td class="transition-metal">Cd<br>48</td>
+      <td class="post-transition-metal">In<br>49</td>
+      <td class="post-transition-metal">Sn<br>50</td>
+      <td class="metalloid">Sb<br>51</td>
+      <td class="metalloid">Te<br>52</td>
+      <td class="halogen">I<br>53</td>
+      <td class="noble-gas">Xe<br>54</td>
+    </tr>
+    <tr>
+      <td id="kirchhoff" class="alkali-metal">Cs<br>55</td>
+      <td class="alkaline-earth-metal">Ba<br>56</td>
+      <td class="transition-metal">La<br>57</td>
+      <td class="transition-metal">Hf<br>72</td>
+      <td class="transition-metal">Ta<br>73</td>
+      <td class="transition-metal">W<br>74</td>
+      <td class="transition-metal">Re<br>75</td>
+      <td class="transition-metal">Os<br>76</td>
+      <td class="transition-metal">Ir<br>77</td>
+      <td class="transition-metal">Pt<br>78</td>
+      <td class="transition-metal">Au<br>79</td>
+      <td class="post-transition-metal">Hg<br>80</td>
+      <td class="post-transition-metal">Tl<br>81</td>
+      <td class="post-transition-metal">Pb<br>82</td>
+      <td class="post-transition-metal">Bi<br>83</td>
+      <td class="metalloid">Po<br>84</td>
+      <td class="metalloid">At<br>85</td>
+      <td class="noble-gas">Rn<br>86</td>
+    </tr>
+    <tr class="period-7">
+      <td class="alkali-metal">Fr<br>87</td>
+      <td class="alkali-metal">Ra<br>88</td>
+      <td class="transition-metal">Ac<br>89</td>
+      <td class="transition-metal">Rf<br>104</td>
+      <td class="transition-metal">Db<br>105</td>
+      <td class="transition-metal">Sg<br>106</td>
+      <td class="transition-metal">Bh<br>107</td>
+      <td class="transition-metal">Hs<br>108</td>
+      <td class="transition-metal">Mt<br>109</td>
+      <td class="post-transition-metal">Ds<br>110</td>
+      <td class="post-transition-metal">Rg<br>111</td>
+      <td class="post-transition-metal">Cn<br>112</td>
+      <td class="post-transition-metal">Nh<br>113</td>
+      <td class="post-transition-metal">Fl<br>114</td>
+      <td class="post-transition-metal">Mc<br>115</td>
+      <td class="post-transition-metal">Lv<br>116</td>
+      <td class="post-transition-metal">Ts<br>117</td>
+      <td class="noble-gas">Og<br>118</td>
+    </tr>
+    <td class="spacer" colspan="18"></td>
+    <tr>
+      <td class="spacer" colspan="2"></td>
+      <td class="lanthanide">La<br>57</td>
+      <td class="lanthanide">Ce<br>58</td>
+      <td class="lanthanide">Pr<br>59</td>
+      <td class="lanthanide">Nd<br>60</td>
+      <td class="lanthanide">Pm<br>61</td>
+      <td class="lanthanide">Sm<br>62</td>
+      <td class="lanthanide">Eu<br>63</td>
+      <td class="lanthanide">Gd<br>64</td>
+      <td class="lanthanide">Tb<br>65</td>
+      <td class="lanthanide">Dy<br>66</td>
+      <td class="lanthanide">Ho<br>67</td>
+      <td class="lanthanide">Er<br>68</td>
+      <td class="lanthanide">Tm<br>69</td>
+      <td class="lanthanide">Yb<br>70</td>
+      <td class="lanthanide">Lu<br>71</td>
+    </tr>
+    <tr>
+      <td class="spacer" colspan="2"></td>
+      <td class="actinide">Ac<br>89</td>
+      <td class="actinide">Th<br>90</td>
+      <td class="actinide">Pa<br>91</td>
+      <td class="actinide">U<br>92</td>
+      <td class="actinide">Np<br>93</td>
+      <td class="actinide">Pu<br>94</td>
+      <td class="actinide">Am<br>95</td>
+      <td class="actinide">Cm<br>96</td>
+      <td class="actinide">Bk<br>97</td>
+      <td class="actinide">Cf<br>98</td>
+      <td class="actinide">Es<br>99</td>
+      <td class="actinide">Fm<br>100</td>
+      <td class="actinide">Md<br>101</td>
+      <td class="actinide">No<br>102</td>
+      <td class="actinide">Lr<br>103</td>
+    </tr>
+  
+  </table>
+
+  </div>
+  <script>
+  const slider = document.getElementById('slider');
+let scrollAmount = 0;
+
+function slideLeft() {
+    const slideWidth = document.querySelector('.slide').offsetWidth + 20; // Including margin
+    scrollAmount -= slideWidth;
+    if (scrollAmount < 0) {
+        scrollAmount = 0;
+    }
+    // Corrected string interpolation
+    slider.style.transform = `translateX(-${scrollAmount}px)`;
+}
+
+function slideRight() {
+    const slideWidth = document.querySelector('.slide').offsetWidth + 20; // Including margin
+    const maxScroll = slider.scrollWidth - slider.offsetWidth;
+    scrollAmount += slideWidth;
+    if (scrollAmount > maxScroll) {
+        scrollAmount = maxScroll;
+    }
+    // Corrected string interpolation
+    slider.style.transform = `translateX(-${scrollAmount}px)`;
+}
+
+function navigateTo(page) {
+    window.location.href = page;
+}
+
+function clearFilter() {
+    // Implement clear filter functionality
+    alert('Filter cleared!');
+}
+
+</script>
+</body>
+</html>
+

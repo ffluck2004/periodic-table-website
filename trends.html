@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+    background-color: #620062;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    left: -1%;
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 1.5rem;
+
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  #tile {
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  #title {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+      .container {
+        margin-top: 100px; /* To avoid overlap with fixed navbar */
+        padding: 2rem;
+      }
+  
+      .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      .trend-section {
+        margin-bottom: 40px;
+      }
+  
+      .trend-section h2 {
+        font-size: 1.8rem;
+        color: #620062;
+        margin-bottom: 10px;
+      }
+  
+      .trend-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 10px;
+      }
+  
+      .graph-placeholder {
+        width: 100%;
+        height: 400px;
+        background-color: #fcfafa;
+        text-align: center;
+        line-height: 400px;
+        color: #333;
+        font-size: 1.2rem;
+      }
+  
+      .diagram-placeholder {
+        width: 100%;
+        height: 350px;
+        background-color: #fcfafa;
+        text-align: center;
+        line-height: 350px;
+        color: #333;
+        font-size: 1.2rem;
+        margin-top: 20px;
+      }
+  
+      .explore-btn {
+        background-color: #ffcc00;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+  
+      .explore-btn:hover {
+        background-color: #e6b800;
+      }
+
+      figcaption{
+    text-align: center;
+      }
+  
+    </style>
+    <head>
+
+<body>
+    <nav>
+        <h1>Periodic Table</h1>
+        <div id="header-nav">
+          <a href="periodic1.html" class="nav-link" data-section="home">Home</a>
+          <a href="history.html" class="nav-link" data-section="history">History</a>
+          <a href="alchemy.html" class="nav-link" data-section="alchemy">Alchemy</a>
+          <a href="trends.html" class="nav-link" data-section="trends">Trends</a>
+        </div>
+      </nav>
+      
+</head>
+<body>
+  
+    <nav>
+      <h1>Periodic Table Trends</h1>
+      <div id="header-nav">
+        <a href="periodic1.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="alchemy.html">Alchemy</a>
+        <a href="trends.html">Trends</a>
+      </div>
+    </nav>
+  
+    <div class="container">
+      <header>
+        <h1 class="title">Trends in the Periodic Table</h1>
+      </header>
+
+      <section class="trend-section">
+        <h2>Periodic trends</h2>
+        <p>Periodic trends are specific patterns that are present in the periodic table that illustrate
+          aspects of a certain element, including its size and its electronic properties. Major periodic trends include:
+          Electronegativity ,ionization ,electron affinity,atomic radius and metallic character.
+           periodic trends, arising from the arrangement of the periodic table, provide chemists with an invaluable tool to quickly predict an element's properties. These trends exost because of the similar atomic structure
+           of the elementswithin their respective gropu families or periods, and because of the periodic nature of the elements.
+        </p>
+      </section>
+  
+      <section class="trend-section">
+        <h2>Atomic Size (Atomic Radius)</h2>
+        <p>As we move across a period from left to right, the atomic radius decreases. This is because electrons are added to the same shell, but the nuclear charge increases. A greater nuclear charge attracts the electrons more strongly, leading to a smaller atomic radius.</p>
+        <p>In contrast, as we move down a group, the atomic radius increases. This is because the number of electron shells increases, which places the outermost electrons further away from the nucleus, reducing the pull of the nucleus on these electrons.</p>
+        <div class="graph-placeholder">
+          <image src="https://chem.libretexts.org/@api/deki/files/1187/Atomic_Radius_Trend_IK.png?revision=1">
+          </image>
+        </div>
+        <figcaption>Figure  1 : Periodic Table showing Atomic Radius Trend</figcaption>
+
+      </section>
+  
+      <section class="trend-section">
+        
+        <h2>Ionization Energy Trend</h2>
+          <p>The energy required to remove an electron from a neutral atom in its gaseous phase. Conceptually, ionization energy is the opposite of electronegativity. The lower this energy is, the more readily the atom becomes a cation. Therefore, the higher this energy is, the more unlikely it is the atom becomes a cation. Generally, elements on the right side of the periodic table have a higher ionization energy because their valence shell is nearly filled. Elements on the left side of the periodic table have low ionization energies because of their willingness to lose electrons and become cations. Thus, ionization energy increases from left to right on the periodic table.</p>
+          <section class="trends-section">
+          <div class="graph-placeholder">
+            <image src="https://chem.libretexts.org/@api/deki/files/1193/Ionization_Energy_Graph_IK.png?revision=1"></image>
+          </div>
+          <figcaption class="caption">Figure 2  :Graph showing the Ionization Energy of the Elements from Hydrogen to Argon</figcaption>
+          </section>
+      
+         
+          <p>Another factor that affects ionization energy is electron shielding. Electron shielding 
+            describes the ability of an atom's inner electrons to shield its positively-charged nucleus 
+            from its valence electrons. When moving to the right of a period, the number of electrons 
+            increases and the strength of shielding increases. As a result, it is easier for valence 
+            shell electrons to ionize, and thus the ionization energy decreases down a group. Electron 
+            shielding is also known as screening.</p>
+            
+          <h3>Trends</h3>
+          <ul>
+              <li>The ionization energy of the elements within a period generally increases from left to right. This is due to valence shell stability.</li>
+              <li>The ionization energy of the elements within a group generally decreases from top to bottom. This is due to electron shielding.</li>
+              <li>The noble gases possess very high ionization energies because of their full valence shells as indicated in the graph. Note that helium has the highest ionization energy of all the elements.</li>
+              <li>Some elements have several ionization energies; these varying energies are referred to as the first ionization energy, the second ionization energy, third ionization energy, etc. The first ionization energy is the energy required to remove the outermost, or highest, energy electron, the second ionization energy is the energy required to remove any subsequent high-energy electron from a gaseous cation, etc.</li>
+          </ul>
+      
+          <h3>Chemical Equations for Ionization Energies</h3>
+          <p>Below are the chemical equations describing the first and second ionization energies:</p>
+          <ul>
+              <li>First Ionization Energy: <br>
+                <code>X(g) → X+(g) + e−</code></li>
+              <li>Second Ionization Energy: <br>
+                <code>X+(g) → X2+(g) + e−</code></li>
+          </ul>
+      
+          <p>Generally, any subsequent ionization energies (2nd, 3rd, etc.) follow the same periodic trend as the first ionization energy.</p>
+         <div class="graph-placeholder">
+          <image src="https://chem.libretexts.org/@api/deki/files/1194/Ionization_Energy_Trend_IK.png?revision=1"></image>
+         </div>
+         <figcaption>Figure 3: Periodic Table Showing Ionization Energy Trend</figcaption>
+          
+      
+          <p>Ionization energies decrease as atomic radii increase. This observation is affected by <strong>n</strong> (the principal quantum number) and <strong>Z<sub>eff</sub></strong> (based on the atomic number and shows how many protons are seen in the atom) on the ionization energy (I). The relationship is given by the following equation:</p>
+          <p><code>I = RHZ<sub>eff</sub><sup>2</sup> / n<sup>2</sup></code></p>
+          
+          <p>Across a period, <strong>Z<sub>eff</sub></strong> increases and <strong>n</strong> (principal quantum number) remains the same, so the ionization energy increases.</p>
+      </section>
+  
+      <section class="trend-section">
+        <h2>Electronegativity</h2>
+        <p>Electronegativity can be understood as a chemical property describing an atom's 
+          ability to attract and bind with electrons. Because electronegativity is a qualitative 
+          property, there is no standardized method for calculating electronegativity. However,
+           the most common scale for quantifying electronegativity is the Pauling scale (Table A2), 
+           named after the chemist Linus Pauling. The numbers assigned by the Pauling scale are 
+           dimensionless due to the qualitative nature of electronegativity. Electronegativity 
+           values for each element can be found on certain periodic tables. An example is provided below
+           Electronegativity measures an atom's tendency to attract and form bonds with electrons.
+            This property exists due to the electronic configuration of atoms. Most atoms follow the 
+            octet rule (having the valence, or outer, shell comprise of 8 electrons). Because elements 
+            on the left side of the periodic table have less than a half-full valence shell, the energy 
+            required to gain electrons is significantly higher compared with the energy required to lose 
+            electrons. As a result, the elements on the left side of the periodic table generally lose 
+            electrons when forming bonds. Conversely, elements on the right side of the periodic table 
+            are more energy-efficient in gaining electrons to create a complete valence shell of 8 electrons. 
+            The nature of electronegativity is effectively described thus: the more inclined an atom is to gain
+             electrons, the more likely that atom will pull electrons toward itself.</p>
+             <p>
+              <ul>
+              <li>
+                <strong>From left to right across a period of elements, electronegativity increases</strong> 
+                If the valence shell of an atom is less than half full, it requires less energy to lose an electron than to gain one.
+                 Conversely, if the valence shell is more than half full, it is easier to pull an electron into the valence shell than to donate one.
+              </ul>
+              </p>
+              <p>
+                <ul>
+                  <li>
+                    <strong>From top to bottom down a group, electronegativity decreases. </strong>
+                    This is because atomic number increases down a group, and thus there is an increased 
+                    distance between the valence electrons and nucleus, or a greater atomic radius.
+                  </li>
+                </ul>
+              </p>
+              <p>
+                <ul>
+                  <li>
+                    <strong>Important exceptions of the above rules include the noble gases, lanthanides, and actinides. </strong>
+                    The noble gases possess a complete valence shell and do not usually attract electrons. The lanthanides and actinides
+                     possess more complicated chemistry that does not generally follow any trends. Therefore, noble gases, lanthanides, 
+                     and actinides do not have electronegativity values.
+                  </li>
+                </ul>
+              </p>
+              <p>
+                <ul>
+                  <li>
+                    <strong>As for the transition metals, although they have electronegativity values, there is 
+                      little variance among them across the period and up and down a group</strong>
+                      This is because their metallic properties affect their ability to attract electrons as easily as the other elements.
+                      According to these two general trends, the most electronegative element is fluorine, with 3.98 Pauling units.  
+                  </li>
+                </ul>
+              </p>
+              </section>
+
+        <div class="graph-placeholder">
+          <image src="https://chem.libretexts.org/@api/deki/files/1190/Electronegativity_Trend_IK.png?revision=1&size=bestfit&width=650&height=350" alt="[Graph of Electronegativity Trends]">
+          </image>
+        </div>
+        <figcaption>Figure  4 : Periodic Table of Electronegativity values</figcaption>
+      </section>
+  
+      <section class="trend-section">
+        <h2>Electron Affinity</h2>
+        <p>Electron affinity refers to the energy released when an electron is added to an atom. Across a period, electron affinity becomes more negative (releases more energy) as atoms have a stronger attraction for the added electron. However, electron affinity can show some irregularities, especially among noble gases and group 2 elements.</p>
+        <div class="graph-placeholder">
+          <image src="https://chem.libretexts.org/@api/deki/files/1189/Electron_Affinity_Trend_IK.png?revision=1"></image>
+
+       </div>
+       <figcaption>Figure  5 : Periodic Table showing Electron Affinity Trend</figcaption>
+        <p>Down a group, the electron affinity becomes less negative as the distance between the nucleus and the added electron increases, reducing the attraction
+          Electron affinity generally decreases down a group of elements because each atom is larger than the atom above 
+          it (this is the atomic radius trend, discussed below). This means that an added electron is further away
+           from the atom's nucleus compared with its position in the smaller atom. With a larger distance between the 
+           negatively-charged electron and the positively-charged nucleus, the force of attraction is relatively weaker.
+            Therefore, electron affinity decreases. Moving from left to right across a period, atoms become smaller as t
+            he forces of attraction become stronger. This causes the electron to move closer to the nucleus, thus increasing 
+            the electron affinity from left to right across a period.
+        </p>
+      
+          <p>
+             <li>
+            Electron affinity decreases from top to bottom within a group. This is caused by the increase in atomic radius.
+            </li>
+            <br>
+            <li>  
+              Electron affinity increases from left to right within a period. This is caused by the decrease in atomic radius
+            </li>
+            </ul>
+       
+           
+      </section>
+  
+      <section class="trend-section">
+        <h2>Melting point trends</h2>
+        <p>
+          The melting points is the amount of energy required to break a bond(s) to change the solid
+           phase of a substance to a liquid. Generally, the stronger the bond between the atoms of an element, 
+           the more energy required to break that bond. Because temperature is directly proportional to energy, 
+           a high bond dissociation energy correlates to a high temperature. Melting points are varied and do not 
+           generally form a distinguishable trend across the periodic table. However, certain conclusions can be 
+           drawn from Figure 7.
+        </p>
+        <ul>
+          <li>Metals generally possess a high melting point.</li>
+          <li>Most non-metals possess low melting points.</li>
+          <li>The non-metal carbon possesses the highest melting point of all the elements. The semi-metal boron also possesses a high melting point.</li>   
+        </ul>
+
+
+<div class="graph-placeholder">
+  <image src="https://chem.libretexts.org/@api/deki/files/1195/Melting_Point_Trend_IK.png?revision=1"></image>
+</div>
+<figcaption>Figure  6 : Chart of Melting Points of Various Elements</figcaption>
+      </section>
+
+
+      <section class="trend-section">
+</head>
+<body>
+    <div class="container">
+        <h2>Oxidation States & Valency in the Periodic Table</h2>
+        <p><strong>Oxidation state</strong> refers to the charge an atom would have if it lost or gained electrons completely in a chemical bond. <strong>Valency</strong> is the number of electrons an atom can lose, gain, or share to form bonds. These two properties follow specific trends in the periodic table.</p>
+        
+        <h3>1. Oxidation States Across a Period</h3>
+        <p>As we move <strong>from left to right</strong> in a period, the oxidation state <strong>first increases from +1 to +4</strong> (for metals and metalloids) and then <strong>decreases from +4 to 0</strong> (for nonmetals).</p>
+        <ul>
+            <li><strong>Lithium (Li)</strong> → +1</li>
+            <li><strong>Beryllium (Be)</strong> → +2</li>
+            <li><strong>Boron (B)</strong> → +3</li>
+            <li><strong>Carbon (C)</strong> → +4, -4</li>
+            <li><strong>Nitrogen (N)</strong> → +5 to -3</li>
+            <li><strong>Oxygen (O)</strong> → -2</li>
+            <li><strong>Fluorine (F)</strong> → -1</li>
+            <li><strong>Neon (Ne)</strong> → 0</li>
+        </ul>
+        
+        <h3>2. Oxidation States Down a Group</h3>
+        <p><strong>Down a group, oxidation states remain the same</strong> because elements in the same group have the same number of valence electrons. However, in some elements (especially in <strong>p-block</strong> like group 14, 15, and 16), the <strong>lower oxidation states become more stable</strong> down the group.</p>
+        <ul>
+            <li><strong>Carbon (C)</strong> → +4 is stable</li>
+            <li><strong>Lead (Pb)</strong> → +2 is more stable than +4</li>
+        </ul>
+        <p>This happens due to the <strong>inert pair effect</strong>, where heavier elements prefer lower oxidation states because their inner electrons do not participate in bonding.</p>
+        
+        <h3>3. Multiple Oxidation States in Transition Elements</h3>
+        <p>Transition metals (d-block elements) show <strong>multiple oxidation states</strong> because their d-electrons can participate in bonding.</p>
+        <ul>
+            <li><strong>Iron (Fe)</strong> → +2, +3</li>
+            <li><strong>Copper (Cu)</strong> → +1, +2</li>
+            <li><strong>Manganese (Mn)</strong> → +2, +4, +7</li>
+        </ul>
+        <p>This happens because the energy difference between their valence electrons is small, allowing them to lose different numbers of electrons.</p>
+        
+        <div class="graph-placeholder"> 
+       <image src="https://files.askiitians.com/cdn1/images/2017126-193843169-965-oxidation-state-as-periodic-property.png"></image>
+           </div>
+        <figcaption>Figure  6 : Oxidation state trends across a period and multiple oxidation states in transition elements</figcaption>
+    </div>
+
+      </section>
+      
+
+  </body>
+  </html>
+  
