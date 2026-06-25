@@ -1,252 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Periodic Table</title>
   <link rel="stylesheet" href="periodic1.css">
 </head>
+
 <body>
   <header>
-  <nav>
-    <h1>Periodic Table</h1>
-    <div id="header-nav">
-      <a href="periodic1.html" class="nav-link" data-section="home">Home</a>
-      <a href="history.html" class="nav-link" data-section="history">History</a>
-      <a href="alchemy.html" class="nav-link" data-section="alchemy">Alchemy</a>
-      <a href="trends.html" class="nav-link" data-section="trends">Trends</a>
-    </div>
-  </nav>
-  
+    <nav>
+      <h1>Periodic Table</h1>
+      <div id="header-nav">
+        <a href="periodic1.html" class="nav-link" data-section="home">Home</a>
+        <a href="history.html" class="nav-link" data-section="history">History</a>
+        <a href="alchemy.html" class="nav-link" data-section="alchemy">Alchemy</a>
+        <a href="trends.html" class="nav-link" data-section="trends">Trends</a>
+      </div>
+    </nav>
+
   </header>
-  
-  <!--description box with information--> 
-<main>
-  <div id="info_div">
-    <h2 id="info_title">Periodic Table</h2>
-  </div>
-  <div id="info_desc">
-    <p>The periodic table organizes elements by atomic number and properties,dividing them into metals,
-       nonmetals, and metalloids. It helps predict chemical behavior and reactions.Dmitri Mendeleev created
-        the first version in 1869,later refined by Henry Moseley using atomic numbers.Today, it is a fundamental tool 
+
+  <!--description box with information-->
+  <main>
+    <div id="info_div">
+      <h2 id="info_title">Periodic Table</h2>
+    </div>
+    <div id="info_desc">
+      <p>The periodic table organizes elements by atomic number and properties,dividing them into metals,
+        nonmetals, and metalloids. It helps predict chemical behavior and reactions.Dmitri Mendeleev created
+        the first version in 1869,later refined by Henry Moseley using atomic numbers.Today, it is a fundamental tool
         in chemistry.
-    </p>
-  </div>
+      </p>
+    </div>
 
-  </nav>
-<div class="periodic-table-div">
-   <!--another div for visiual elements,classifiction button -->
-   <div id="controls" class="controls">
+    </nav>
+    <div class="periodic-table-div">
+      <!--another div for visiual elements,classifiction button -->
+      <div id="controls" class="controls">
 
-    <!--blocks button-->
-    <label for="blocks">Blocks</label>
-  <a href="s-block.html">
-    <button class="button metal" id="metal-btn">s</button>
-    </a>
+        <!--blocks button-->
+        <label for="blocks">Blocks</label>
+        <a href="s-block.html">
+          <button class="button metal" id="metal-btn">s</button>
+        </a>
 
-    <a href="d-block.html">
-      <button class="button metal" id="metal-btn">d</button>
-      </a>
+        <a href="d-block.html">
+          <button class="button metal" id="metal-btn">d</button>
+        </a>
 
-      <a href="p-block.html">
-        <button class="button metal">p</button>
+        <a href="p-block.html">
+          <button class="button metal">p</button>
         </a>
 
         <a href="f-block.html">
-          <button class="button metal" >f</button>
-          </a>
-    
-    <label>Classification</label>
-    <!--metal button-->
-    <a href="metals.html">
-    <button class="button metal" id="metal-btn">Metal</button>
-    <!--non -metal button-->
-  </a>
-    <a href="non-metal.html">
-      <button class="button non-metal" id="non-metal-btn">Non-Metal</button>
-    </a>
+          <button class="button metal">f</button>
+        </a>
 
-    <!--clear filter button-->
-    <a href="clearfilter.html">
-    <button class="button clear-filters" id="clear-filters-btn">Clear Filters</button>
-    </a>
+        <label>Classification</label>
+        <!--metal button-->
+        <a href="metals.html">
+          <button class="button metal" id="metal-btn">Metal</button>
+          <!--non -metal button-->
+        </a>
+        <a href="non-metal.html">
+          <button class="button non-metal" id="non-metal-btn">Non-Metal</button>
+        </a>
 
-    <!--lactinides and actinides-->
-    <a href="lactinides.html">
-      <button class="button metal" >Lactinides</button>
-      </a>
-      <a href="actinides.html">
-        <button class="button metal" >Actinides</button>
+        <!--clear filter button-->
+        <a href="clearfilter.html">
+          <button class="button clear-filters" id="clear-filters-btn">Clear Filters</button>
+        </a>
+
+        <!--lactinides and actinides-->
+        <a href="lactinides.html">
+          <button class="button metal">Lactinides</button>
+        </a>
+        <a href="actinides.html">
+          <button class="button metal">Actinides</button>
         </a>
         <!-- halogen , metalloids and noble gas button -->
         <a href="halogen.html">
-          <button class="button metal" >Halogen</button>
-          </a>
-          <a href="metalloid.html">
-            <button class="button metal" >Metalloid</button>
-            </a>
-            <a href="noble-gas.html">
-              <button class="button metal" >Noble-gas</button>
-              </a>
-  
-  </div>
-  
-<!--perioidc table content-->
-  <!--perioidc table content-->
-  <table class="p_table">
-    <tr>
-      <td class="alkali-metal">H<br>1</td>
-      <td colspan="16" class="spacer"></td>
-      <td class="noble-gas">He<br>2</td>
-    </tr>
-    <tr>
-      <td class="alkali-metal">Li<br>3</td>
-      <td class="alkaline-earth-metal">Be<br>4</td>
-      <td colspan="10" class="spacer"></td>
-      <td class="metalloid">B<br>5</td>
-      <td class="non-metal">C<br>6</td>
-      <td class="non-metal">N<br>7</td>
-      <td class="non-metal">O<br>8</td>
-      <td class="halogen">F<br>9</td>
-      <td class="noble-gas">Ne<br>10</td>
-    </tr>
-    <tr>
-      <td class="alkali-metal">Na<br>11</td>
-      <td class="alkaline-earth-metal">Mg<br>12</td>
-      <td colspan="10" class="spacer"></td>
-      <td class="post-transition-metal">Al<br>13</td>
-      <td class="metalloid">Si<br>14</td>
-      <td class="non-metal">P<br>15</td>
-      <td class="non-metal">S<br>16</td>
-      <td class="halogen">Cl<br>17</td>
-      <td class="noble-gas">Ar<br>18</td>
-    </tr>
-    <tr>
-      <td class="alkali-metal">K<br>19</td>
-      <td class="alkaline-earth-metal">Ca<br>20</td>
-      <td class="transition-metal">Sc<br>21</td>
-      <td class="transition-metal">Ti<br>22</td>
-      <td class="transition-metal">V<br>23</td>
-      <td class="transition-metal">Cr<br>24</td>
-      <td class="transition-metal">Mn<br>25</td>
-      <td class="transition-metal">Fe<br>26</td>
-      <td class="transition-metal">Co<br>27</td>
-      <td class="transition-metal">Ni<br>28</td>
-      <td class="transition-metal">Cu<br>29</td>
-      <td class="transition-metal">Zn<br>30</td>
-      <td class="post-transition-metal">Ga<br>31</td>
-      <td class="metalloid">Ge<br>32</td>
-      <td class="metalloid">As<br>33</td>
-      <td class="non-metal">Se<br>34</td>
-      <td class="halogen">Br<br>35</td>
-      <td class="noble-gas">Kr<br>36</td>
-    </tr>
-    <tr>
-      <td class="alkali-metal">Rb<br>37</td>
-      <td class="alkaline-earth-metal">Sr<br>38</td>
-      <td class="transition-metal">Y<br>39</td>
-      <td class="transition-metal">Zr<br>40</td>
-      <td class="transition-metal">Nb<br>41</td>
-      <td class="transition-metal">Mo<br>42</td>
-      <td class="transition-metal">Tc<br>43</td>
-      <td class="transition-metal">Ru<br>44</td>
-      <td class="transition-metal">Rh<br>45</td>
-      <td class="transition-metal">Pd<br>46</td>
-      <td class="transition-metal">Ag<br>47</td>
-      <td class="transition-metal">Cd<br>48</td>
-      <td class="post-transition-metal">In<br>49</td>
-      <td class="post-transition-metal">Sn<br>50</td>
-      <td class="metalloid">Sb<br>51</td>
-      <td class="metalloid">Te<br>52</td>
-      <td class="halogen">I<br>53</td>
-      <td class="noble-gas">Xe<br>54</td>
-    </tr>
-    <tr>
-      <td class="alkali-metal">Cs<br>55</td>
-      <td class="alkaline-earth-metal">Ba<br>56</td>
-      <td class="transition-metal">La<br>57</td>
-      <td class="transition-metal">Hf<br>72</td>
-      <td class="transition-metal">Ta<br>73</td>
-      <td class="transition-metal">W<br>74</td>
-      <td class="transition-metal">Re<br>75</td>
-      <td class="transition-metal">Os<br>76</td>
-      <td class="transition-metal">Ir<br>77</td>
-      <td class="transition-metal">Pt<br>78</td>
-      <td class="transition-metal">Au<br>79</td>
-      <td class="post-transition-metal">Hg<br>80</td>
-      <td class="post-transition-metal">Tl<br>81</td>
-      <td class="post-transition-metal">Pb<br>82</td>
-      <td class="post-transition-metal">Bi<br>83</td>
-      <td class="metalloid">Po<br>84</td>
-      <td class="metalloid">At<br>85</td>
-      <td class="noble-gas">Rn<br>86</td>
-    </tr>
-    <tr class="period-7">
-      <td class="alkali-metal">Fr<br>87</td>
-      <td class="alkali-metal">Ra<br>88</td>
-      <td class="transition-metal">Ac<br>89</td>
-      <td class="transition-metal">Rf<br>104</td>
-      <td class="transition-metal">Db<br>105</td>
-      <td class="transition-metal">Sg<br>106</td>
-      <td class="transition-metal">Bh<br>107</td>
-      <td class="transition-metal">Hs<br>108</td>
-      <td class="transition-metal">Mt<br>109</td>
-      <td class="post-transition-metal">Ds<br>110</td>
-      <td class="post-transition-metal">Rg<br>111</td>
-      <td class="post-transition-metal">Cn<br>112</td>
-      <td class="post-transition-metal">Nh<br>113</td>
-      <td class="post-transition-metal">Fl<br>114</td>
-      <td class="post-transition-metal">Mc<br>115</td>
-      <td class="post-transition-metal">Lv<br>116</td>
-      <td class="post-transition-metal">Ts<br>117</td>
-      <td class="noble-gas">Og<br>118</td>
-    </tr>
-    <td class="spacer" colspan="18"></td>
-    <tr>
-      <td class="spacer" colspan="2"></td>
-      <td class="lanthanide">La<br>57</td>
-      <td class="lanthanide">Ce<br>58</td>
-      <td class="lanthanide">Pr<br>59</td>
-      <td class="lanthanide">Nd<br>60</td>
-      <td class="lanthanide">Pm<br>61</td>
-      <td class="lanthanide">Sm<br>62</td>
-      <td class="lanthanide">Eu<br>63</td>
-      <td class="lanthanide">Gd<br>64</td>
-      <td class="lanthanide">Tb<br>65</td>
-      <td class="lanthanide">Dy<br>66</td>
-      <td class="lanthanide">Ho<br>67</td>
-      <td class="lanthanide">Er<br>68</td>
-      <td class="lanthanide">Tm<br>69</td>
-      <td class="lanthanide">Yb<br>70</td>
-      <td class="lanthanide">Lu<br>71</td>
-    </tr>
-    <tr>
-      <td class="spacer" colspan="2"></td>
-      <td class="actinide">Ac<br>89</td>
-      <td class="actinide">Th<br>90</td>
-      <td class="actinide">Pa<br>91</td>
-      <td class="actinide">U<br>92</td>
-      <td class="actinide">Np<br>93</td>
-      <td class="actinide">Pu<br>94</td>
-      <td class="actinide">Am<br>95</td>
-      <td class="actinide">Cm<br>96</td>
-      <td class="actinide">Bk<br>97</td>
-      <td class="actinide">Cf<br>98</td>
-      <td class="actinide">Es<br>99</td>
-      <td class="actinide">Fm<br>100</td>
-      <td class="actinide">Md<br>101</td>
-      <td class="actinide">No<br>102</td>
-      <td class="actinide">Lr<br>103</td>
-    </tr>
-  
-  </table>
+          <button class="button metal">Halogen</button>
+        </a>
+        <a href="metalloid.html">
+          <button class="button metal">Metalloid</button>
+        </a>
+        <a href="noble-gas.html">
+          <button class="button metal">Noble-gas</button>
+        </a>
 
-</div>
-</main>
+      </div>
+
+      <!--perioidc table content-->
+      <!--perioidc table content-->
+      <table class="p_table">
+        <tr>
+          <td class="alkali-metal">H<br>1</td>
+          <td colspan="16" class="spacer"></td>
+          <td class="noble-gas">He<br>2</td>
+        </tr>
+        <tr>
+          <td class="alkali-metal">Li<br>3</td>
+          <td class="alkaline-earth-metal">Be<br>4</td>
+          <td colspan="10" class="spacer"></td>
+          <td class="metalloid">B<br>5</td>
+          <td class="non-metal">C<br>6</td>
+          <td class="non-metal">N<br>7</td>
+          <td class="non-metal">O<br>8</td>
+          <td class="halogen">F<br>9</td>
+          <td class="noble-gas">Ne<br>10</td>
+        </tr>
+        <tr>
+          <td class="alkali-metal">Na<br>11</td>
+          <td class="alkaline-earth-metal">Mg<br>12</td>
+          <td colspan="10" class="spacer"></td>
+          <td class="post-transition-metal">Al<br>13</td>
+          <td class="metalloid">Si<br>14</td>
+          <td class="non-metal">P<br>15</td>
+          <td class="non-metal">S<br>16</td>
+          <td class="halogen">Cl<br>17</td>
+          <td class="noble-gas">Ar<br>18</td>
+        </tr>
+        <tr>
+          <td class="alkali-metal">K<br>19</td>
+          <td class="alkaline-earth-metal">Ca<br>20</td>
+          <td class="transition-metal">Sc<br>21</td>
+          <td class="transition-metal">Ti<br>22</td>
+          <td class="transition-metal">V<br>23</td>
+          <td class="transition-metal">Cr<br>24</td>
+          <td class="transition-metal">Mn<br>25</td>
+          <td class="transition-metal">Fe<br>26</td>
+          <td class="transition-metal">Co<br>27</td>
+          <td class="transition-metal">Ni<br>28</td>
+          <td class="transition-metal">Cu<br>29</td>
+          <td class="transition-metal">Zn<br>30</td>
+          <td class="post-transition-metal">Ga<br>31</td>
+          <td class="metalloid">Ge<br>32</td>
+          <td class="metalloid">As<br>33</td>
+          <td class="non-metal">Se<br>34</td>
+          <td class="halogen">Br<br>35</td>
+          <td class="noble-gas">Kr<br>36</td>
+        </tr>
+        <tr>
+          <td class="alkali-metal">Rb<br>37</td>
+          <td class="alkaline-earth-metal">Sr<br>38</td>
+          <td class="transition-metal">Y<br>39</td>
+          <td class="transition-metal">Zr<br>40</td>
+          <td class="transition-metal">Nb<br>41</td>
+          <td class="transition-metal">Mo<br>42</td>
+          <td class="transition-metal">Tc<br>43</td>
+          <td class="transition-metal">Ru<br>44</td>
+          <td class="transition-metal">Rh<br>45</td>
+          <td class="transition-metal">Pd<br>46</td>
+          <td class="transition-metal">Ag<br>47</td>
+          <td class="transition-metal">Cd<br>48</td>
+          <td class="post-transition-metal">In<br>49</td>
+          <td class="post-transition-metal">Sn<br>50</td>
+          <td class="metalloid">Sb<br>51</td>
+          <td class="metalloid">Te<br>52</td>
+          <td class="halogen">I<br>53</td>
+          <td class="noble-gas">Xe<br>54</td>
+        </tr>
+        <tr>
+          <td class="alkali-metal">Cs<br>55</td>
+          <td class="alkaline-earth-metal">Ba<br>56</td>
+          <td class="transition-metal">La<br>57</td>
+          <td class="transition-metal">Hf<br>72</td>
+          <td class="transition-metal">Ta<br>73</td>
+          <td class="transition-metal">W<br>74</td>
+          <td class="transition-metal">Re<br>75</td>
+          <td class="transition-metal">Os<br>76</td>
+          <td class="transition-metal">Ir<br>77</td>
+          <td class="transition-metal">Pt<br>78</td>
+          <td class="transition-metal">Au<br>79</td>
+          <td class="post-transition-metal">Hg<br>80</td>
+          <td class="post-transition-metal">Tl<br>81</td>
+          <td class="post-transition-metal">Pb<br>82</td>
+          <td class="post-transition-metal">Bi<br>83</td>
+          <td class="metalloid">Po<br>84</td>
+          <td class="metalloid">At<br>85</td>
+          <td class="noble-gas">Rn<br>86</td>
+        </tr>
+        <tr class="period-7">
+          <td class="alkali-metal">Fr<br>87</td>
+          <td class="alkaline-earth-metal">Ra<br>88</td>
+          <td class="transition-metal">Ac<br>89</td>
+          <td class="transition-metal">Rf<br>104</td>
+          <td class="transition-metal">Db<br>105</td>
+          <td class="transition-metal">Sg<br>106</td>
+          <td class="transition-metal">Bh<br>107</td>
+          <td class="transition-metal">Hs<br>108</td>
+          <td class="transition-metal">Mt<br>109</td>
+          <td class="post-transition-metal">Ds<br>110</td>
+          <td class="post-transition-metal">Rg<br>111</td>
+          <td class="post-transition-metal">Cn<br>112</td>
+          <td class="post-transition-metal">Nh<br>113</td>
+          <td class="post-transition-metal">Fl<br>114</td>
+          <td class="post-transition-metal">Mc<br>115</td>
+          <td class="post-transition-metal">Lv<br>116</td>
+          <td class="post-transition-metal">Ts<br>117</td>
+          <td class="noble-gas">Og<br>118</td>
+        </tr>
+        <td class="spacer" colspan="18"></td>
+        <tr>
+          <td class="spacer" colspan="2"></td>
+          <td class="lanthanide">La<br>57</td>
+          <td class="lanthanide">Ce<br>58</td>
+          <td class="lanthanide">Pr<br>59</td>
+          <td class="lanthanide">Nd<br>60</td>
+          <td class="lanthanide">Pm<br>61</td>
+          <td class="lanthanide">Sm<br>62</td>
+          <td class="lanthanide">Eu<br>63</td>
+          <td class="lanthanide">Gd<br>64</td>
+          <td class="lanthanide">Tb<br>65</td>
+          <td class="lanthanide">Dy<br>66</td>
+          <td class="lanthanide">Ho<br>67</td>
+          <td class="lanthanide">Er<br>68</td>
+          <td class="lanthanide">Tm<br>69</td>
+          <td class="lanthanide">Yb<br>70</td>
+          <td class="lanthanide">Lu<br>71</td>
+        </tr>
+        <tr>
+          <td class="spacer" colspan="2"></td>
+          <td class="actinide">Ac<br>89</td>
+          <td class="actinide">Th<br>90</td>
+          <td class="actinide">Pa<br>91</td>
+          <td class="actinide">U<br>92</td>
+          <td class="actinide">Np<br>93</td>
+          <td class="actinide">Pu<br>94</td>
+          <td class="actinide">Am<br>95</td>
+          <td class="actinide">Cm<br>96</td>
+          <td class="actinide">Bk<br>97</td>
+          <td class="actinide">Cf<br>98</td>
+          <td class="actinide">Es<br>99</td>
+          <td class="actinide">Fm<br>100</td>
+          <td class="actinide">Md<br>101</td>
+          <td class="actinide">No<br>102</td>
+          <td class="actinide">Lr<br>103</td>
+        </tr>
+
+      </table>
+
+    </div>
+  </main>
 
 
   <script src="periodic1.js"></script>
 </body>
 
 </html>
- 
