@@ -4,7 +4,7 @@ An interactive, educational periodic table of elements built with HTML5, CSS3, a
 
 ## Live Demo
 
-[PASTE_VERCEL_URL_HERE]((https://periodic-table-website-737lbz2oj-ffluck2004s-projects.vercel.app/periodic1.html))
+https://periodic-table-website-3rfarierd-ffluck2004s-projects.vercel.app
 
 ## Features
 
